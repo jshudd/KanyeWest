@@ -10,9 +10,16 @@ namespace KanyeWest
         {
 
             KanyeQuote();
+            Console.WriteLine();
 
             RonQuote();
-            
+            Console.WriteLine();
+
+            Console.WriteLine($"{QuoteKanye.GetQuote()}");
+            Console.WriteLine();
+
+            Console.WriteLine($"{QuoteRon.GetQuote()}");
+            Console.WriteLine();
         }
 
         public static void KanyeQuote()
