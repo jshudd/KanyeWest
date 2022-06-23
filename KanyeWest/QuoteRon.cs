@@ -20,7 +20,7 @@ namespace KanyeWest
 
             var ronQuote = JArray.Parse(ronResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
 
-            return $"2nd Ron Swanson: {ronQuote}";
+            return $"Ron Swanson: {ronQuote}";
         }
 
     }

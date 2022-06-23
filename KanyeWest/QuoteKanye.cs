@@ -21,7 +21,7 @@ namespace KanyeWest
             
             var kanyeQuote = JObject.Parse(kanyeResponse).GetValue("quote").ToString();
 
-            return $"2nd Kanye: {kanyeQuote}";
+            return $"Kanye: {kanyeQuote}";
 
 
         }

@@ -8,18 +8,32 @@ namespace KanyeWest
     {
         static void Main(string[] args)
         {
+            bool cont = true;
+            do
+            {
 
-            KanyeQuote();
-            Console.WriteLine();
+                //KanyeQuote(); //Methods defined below
+                //Console.WriteLine();
 
-            RonQuote();
-            Console.WriteLine();
+                //RonQuote();
+                //Console.WriteLine();
 
-            Console.WriteLine($"{QuoteKanye.GetQuote()}");
-            Console.WriteLine();
+                Console.WriteLine(ChuckNorris.GetQuote());
+                Console.WriteLine();
 
-            Console.WriteLine($"{QuoteRon.GetQuote()}");
-            Console.WriteLine();
+                //Console.WriteLine($"{QuoteKanye.GetQuote()}"); //In Classes
+                //Console.WriteLine();
+
+                //Console.WriteLine($"{QuoteRon.GetQuote()}"); //In Class
+                //Console.WriteLine();
+
+                //Console.WriteLine(CatFacts.CatFactsQuote());
+
+                Console.WriteLine("Continue? Y or N?");
+                var response = Console.ReadLine().ToLower();
+                cont = (response == "n") ? false : true;
+
+            } while (cont);
         }
 
         public static void KanyeQuote()
@@ -37,6 +51,7 @@ namespace KanyeWest
             var kanyeQuote = JObject.Parse(kanyeResponse).GetValue("quote").ToString();
 
             Console.WriteLine($"Kanye: {kanyeQuote}");
+            Console.WriteLine();
         }
 
         public static void RonQuote()
@@ -51,6 +66,7 @@ namespace KanyeWest
             var ronQuote = JArray.Parse(ronResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
 
             Console.WriteLine($"Ron Swanson: {ronQuote}");
+            Console.WriteLine();
         }
     }
 }
